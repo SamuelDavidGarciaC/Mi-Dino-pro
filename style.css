@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background: rgb(112, 84, 33);
+    display: flex;
+    align-items: center;
+}
+
+.contenedor{
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+
+    background: linear-gradient(rgb(121, 186, 250), #FFE2D7);
+
+    overflow: hidden;
+}
+
+/* si quiero cambiarlo un poquito,puedo hacerlo */
+.dino{
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    bottom: 12px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(./img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+}
+
+.dino-corriendo{
+    animation: animarDino 0.25s steps(2) infinite;
+}
+
+.suelo{
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(./img/suelo.png) repeat-x 0px 0px;
+    background-size:  50% 42px;
+
+}
+
+.puntaje{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}
